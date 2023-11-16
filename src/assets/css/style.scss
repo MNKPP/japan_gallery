@@ -19,13 +19,22 @@
 		@apply flex items-center justify-between border-2 border-black p-2;
 
 		.left-container {
+			@apply md:flex md:items-center;
 			span {
 				@apply text-lg font-bold tracking-wide;
+			}
+
+			ul {
+				@apply md:flex md:ml-10;
+
+				li {
+					@apply md:mx-2
+				}
 			}
 		}
 
 		input {
-			@apply h-10 bg-gray-50 border-2 border-black text-gray-900 text-sm rounded-lg w-2/4 p-2.5 mr-2 mt-10;
+			@apply h-10 bg-gray-50 border-2 border-black text-gray-900 text-sm rounded-lg w-2/4 p-2.5 mr-2 mt-10 md:mt-0;
 		}
 	}
 
@@ -38,10 +47,10 @@
 		@apply grow;
 		#filters {
 			ul {
-				@apply flex justify-evenly mt-5;
+				@apply flex justify-evenly mt-5 ;
 
 				li {
-					@apply border-2 border-black px-2 py-2;
+					@apply border-2 border-black px-2 py-2 md:w-1/6 md:text-center;
 				}
 			}
 		}
@@ -64,7 +73,7 @@
 	// THEME
 
 	#gallery {
-		@apply columns-2 mt-5 p-3;
+		@apply columns-2 md:columns-3 xl:columns-4 mt-10 p-3;
 		h1 {
 			@apply text-center;
 		}
@@ -72,8 +81,12 @@
 		.card {
 			@apply border-2 border-black break-inside-avoid rounded-xl mt-5;
 
+			img {
+				@apply rounded-t-lg;
+			}
+
 			.tickets {
-				@apply flex justify-center items-center;
+				@apply flex justify-center items-center md:justify-between;
 
 				i {
 					@apply mr-5 text-2xl;
