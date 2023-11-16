@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply text-xl font-bold tracking-wide mt-5;
+	}
+}
+
+// Index
+@layer components {
+	.app-container {
+		@apply min-h-screen flex flex-col;
+	}
+
+	// LAYOUT
+	#header {
+		@apply flex items-center justify-between border-2 border-black p-2;
+
+		.left-container {
+			span {
+				@apply text-lg font-bold tracking-wide;
+			}
+		}
+
+		input {
+			@apply h-10 bg-gray-50 border-2 border-black text-gray-900 text-sm rounded-lg w-2/4 p-2.5 mr-2 mt-10;
+		}
+	}
+
+	#footer {
+		@apply flex justify-center bg-black text-white p-6;
+	}
+
+	// INDEX
+	#main {
+		@apply grow;
+		#filters {
+			ul {
+				@apply flex justify-evenly mt-5;
+
+				li {
+					@apply border-2 border-black px-2 py-2;
+				}
+			}
+		}
+
+		#description {
+			@apply mt-10 px-4;
+
+			.tickets {
+				@apply mt-5 flex justify-start;
+
+				p {
+					@apply bg-black text-white rounded-lg p-1 mx-1 text-sm;
+				}
+			}
+			h1 {
+				@apply mb-3;
+			}
+		}
+	}
+	// THEME
+
+	#gallery {
+		@apply columns-2 mt-5 p-3;
+		h1 {
+			@apply text-center;
+		}
+
+		.card {
+			@apply border-2 border-black break-inside-avoid rounded-xl mt-5;
+
+			.tickets {
+				@apply flex justify-center items-center;
+
+				i {
+					@apply mr-5 text-2xl;
+				}
+
+				p {
+					@apply bg-black text-white rounded-lg p-1 mx-1 text-sm;
+				}
+
+				.category {
+					@apply flex p-5;
+				}
+			}
+		}
+	}
+}
