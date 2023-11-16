@@ -55,8 +55,12 @@
 			}
 		}
 
+		#articles {
+			@apply mb-10 flex flex-col items-center justify-center lg:grid lg:place-content-center lg:grid-cols-2 xl:place-content-center;
+
+			
 		#description {
-			@apply mt-10 px-4;
+			@apply mt-10 px-4 max-w-2xl;
 
 			.tickets {
 				@apply mt-5 flex justify-start;
@@ -68,6 +72,7 @@
 			h1 {
 				@apply mb-3;
 			}
+		}
 		}
 	}
 	// THEME
@@ -89,7 +94,7 @@
 				@apply flex justify-center items-center md:justify-between;
 
 				i {
-					@apply mr-5 text-2xl;
+					@apply mr-5 text-2xl cursor-pointer hover:text-yellow-400;
 				}
 
 				p {
