@@ -6,6 +6,11 @@
 	h1 {
 		@apply text-xl font-bold tracking-wide mt-5;
 	}
+
+	input {
+		@apply h-10 bg-gray-50 border-2 border-black text-gray-900 text-sm rounded-lg w-2/4 p-2.5 mr-2 mt-10 md:mt-0;
+
+	}
 }
 
 // Index
@@ -33,9 +38,6 @@
 			}
 		}
 
-		input {
-			@apply h-10 bg-gray-50 border-2 border-black text-gray-900 text-sm rounded-lg w-2/4 p-2.5 mr-2 mt-10 md:mt-0;
-		}
 	}
 
 	#footer {
@@ -50,7 +52,7 @@
 				@apply flex justify-evenly mt-5 ;
 
 				li {
-					@apply border-2 border-black px-2 py-2 md:w-1/6 md:text-center;
+					@apply border-2 border-black px-2 py-2 md:w-1/6 md:text-center hover:border-t-8;
 				}
 			}
 		}
@@ -84,7 +86,7 @@
 		}
 
 		.card {
-			@apply border-2 border-black break-inside-avoid rounded-xl mt-5;
+			@apply border-2 border-black break-inside-avoid rounded-xl mt-5 transition duration-300 ease-in-out hover:scale-105;
 
 			img {
 				@apply rounded-t-lg;
@@ -104,6 +106,35 @@
 				.category {
 					@apply flex p-5;
 				}
+			}
+		}
+	}
+
+	// CONTACT
+
+	#form {
+		@apply flex items-center justify-center;
+		form {
+			@apply flex flex-col justify-center w-full mt-20 p-5 max-w-2xl;
+
+			.group-li {
+				@apply flex flex-col justify-center w-full md:mt-3;
+
+				label {
+					@apply items-start;
+				}
+
+				input {
+					@apply w-full mt-1;
+				}
+			}
+
+			textarea {
+				@apply h-32 w-full bg-gray-50 border-2 border-black text-gray-900 text-sm rounded-lg p-2.5 mr-2 mt-10
+			}
+
+			button {
+				@apply bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5
 			}
 		}
 	}
