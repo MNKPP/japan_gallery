@@ -11,7 +11,10 @@
       @apply md:flex md:ml-10;
 
       li {
-        @apply md:mx-4
+        @apply md:mx-4 relative;
+        @apply before:absolute before:content-[''] before:inset-0 before:h-full before:border-b-2 before:border-b-black before:-z-10;
+        @apply before:transition-all before:duration-300 before:origin-left before:scale-x-0;
+        @apply hover:before:scale-x-100;
       }
     }
   }

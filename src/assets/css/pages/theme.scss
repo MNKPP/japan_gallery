@@ -2,11 +2,11 @@
 #gallery {
   @apply columns-2 md:columns-3 xl:columns-4 mt-10 p-3;
   h1 {
-    @apply text-center;
+    @apply text-center font-bold text-5xl;
   }
 
   .card {
-    @apply border-2 border-black break-inside-avoid rounded-xl mt-5 transition duration-300 ease-in-out hover:scale-105;
+    @apply border-2 border-black break-inside-avoid rounded-xl mt-5 transition duration-300 ease-in-out hover:scale-105 cursor-pointer;
 
     img {
       @apply rounded-t-lg;
