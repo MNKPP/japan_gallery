@@ -1,0 +1,19 @@
+#header {
+  @apply flex items-center justify-between border-2 border-black p-2;
+
+  .left-container {
+    @apply md:flex md:items-center;
+    span {
+      @apply text-lg font-bold tracking-wide ;
+    }
+
+    ul {
+      @apply md:flex md:ml-10;
+
+      li {
+        @apply md:mx-4
+      }
+    }
+  }
+
+}

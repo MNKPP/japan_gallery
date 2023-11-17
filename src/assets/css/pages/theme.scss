@@ -1,0 +1,31 @@
+// THEME
+#gallery {
+  @apply columns-2 md:columns-3 xl:columns-4 mt-10 p-3;
+  h1 {
+    @apply text-center;
+  }
+
+  .card {
+    @apply border-2 border-black break-inside-avoid rounded-xl mt-5 transition duration-300 ease-in-out hover:scale-105;
+
+    img {
+      @apply rounded-t-lg;
+    }
+
+    .tickets {
+      @apply flex justify-center items-center md:justify-between;
+
+      i {
+        @apply mr-5 text-2xl cursor-pointer hover:text-yellow-400;
+      }
+
+      p {
+        @apply bg-black text-white rounded-lg p-1 mx-1 text-sm;
+      }
+
+      .category {
+        @apply flex p-5;
+      }
+    }
+  }
+}

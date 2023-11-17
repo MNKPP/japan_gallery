@@ -1,6 +1,12 @@
+@use "layout/header";
+@use "layout/footer";
+@use "pages/contact";
+@use "pages/index";
+@use "pages/theme";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
 	h1 {
@@ -13,129 +19,8 @@
 	}
 }
 
-// Index
 @layer components {
 	.app-container {
 		@apply min-h-screen flex flex-col;
-	}
-
-	// LAYOUT
-	#header {
-		@apply flex items-center justify-between border-2 border-black p-2;
-
-		.left-container {
-			@apply md:flex md:items-center;
-			span {
-				@apply text-lg font-bold tracking-wide;
-			}
-
-			ul {
-				@apply md:flex md:ml-10;
-
-				li {
-					@apply md:mx-2
-				}
-			}
-		}
-
-	}
-
-	#footer {
-		@apply flex justify-center bg-black text-white p-6;
-	}
-
-	// INDEX
-	#main {
-		@apply grow;
-		#filters {
-			ul {
-				@apply flex justify-evenly mt-5 ;
-
-				li {
-					@apply border-2 border-black px-2 py-2 md:w-1/6 md:text-center hover:border-t-8;
-				}
-			}
-		}
-
-		#articles {
-			@apply mb-10 flex flex-col items-center justify-center lg:grid lg:place-content-center lg:grid-cols-2 xl:place-content-center;
-
-			
-		#description {
-			@apply mt-10 px-4 max-w-2xl;
-
-			.tickets {
-				@apply mt-5 flex justify-start;
-
-				p {
-					@apply bg-black text-white rounded-lg p-1 mx-1 text-sm;
-				}
-			}
-			h1 {
-				@apply mb-3;
-			}
-		}
-		}
-	}
-	// THEME
-
-	#gallery {
-		@apply columns-2 md:columns-3 xl:columns-4 mt-10 p-3;
-		h1 {
-			@apply text-center;
-		}
-
-		.card {
-			@apply border-2 border-black break-inside-avoid rounded-xl mt-5 transition duration-300 ease-in-out hover:scale-105;
-
-			img {
-				@apply rounded-t-lg;
-			}
-
-			.tickets {
-				@apply flex justify-center items-center md:justify-between;
-
-				i {
-					@apply mr-5 text-2xl cursor-pointer hover:text-yellow-400;
-				}
-
-				p {
-					@apply bg-black text-white rounded-lg p-1 mx-1 text-sm;
-				}
-
-				.category {
-					@apply flex p-5;
-				}
-			}
-		}
-	}
-
-	// CONTACT
-
-	#form {
-		@apply flex items-center justify-center;
-		form {
-			@apply flex flex-col justify-center w-full mt-20 p-5 max-w-2xl;
-
-			.group-li {
-				@apply flex flex-col justify-center w-full md:mt-3;
-
-				label {
-					@apply items-start;
-				}
-
-				input {
-					@apply w-full mt-1;
-				}
-			}
-
-			textarea {
-				@apply h-32 w-full bg-gray-50 border-2 border-black text-gray-900 text-sm rounded-lg p-2.5 mr-2 mt-10
-			}
-
-			button {
-				@apply bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5
-			}
-		}
 	}
 }
